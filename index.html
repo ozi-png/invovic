@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Fluid</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <!-- ЛОГО -->
+    <div class="logo">
+      <img src="logo.png" alt="Auto Fluid">
+      <span>AUTO FLUID</span>
+    </div>
+    <!-- БУРГЕР -->
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- МЕНЮ -->
+    <nav class="nav" id="nav">
+      <a href="#home">Главная</a>
+      <a href="#products">О продукте</a>
+      <a href="#oremium">Преимущества</a>
+      <a href="#contac">Контакты</a>
+    </nav>
+  </div>
+</header>
+<section class="hero" id="home">
+  <div class="container hero-container">
+    <!-- ТЕКСТ -->
+    <div class="hero-text">
+      <h1>Незамерзающий<br>стеклоомыватель</h1>
+      <p>
+        Чистое стекло в любую погоду.  
+        Эффективно при морозах до −30°C.
+      </p>
+      <a href="#" class="hero-btn" id="orderBtn">Заказать сейчас</a>
+    </div>
+    <!-- КАРТИНКА -->
+    <div class="hero-image">
+      <img src="./img/незамерзайка.jpg" alt="Стеклоомыватель">
+    </div>
+  </div>
+</section>
+<div class="modal" id="orderModal">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModal">&times;</button>
+    <h2>Оставить заявку</h2>
+    <form id="orderForm">
+      <div class="form-group">
+        <label>Вы кто?</label>
+        <select id="clientType" required>
+          <option value="">Выберите</option>
+          <option value="Физическое лицо">Физическое лицо</option>
+          <option value="Юридическое лицо">Юридическое лицо</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Тип покупки</label>
+        <select id="buyType" required>
+          <option value="">Выберите</option>
+          <option value="Оптом">Оптом</option>
+          <option value="В розницу">В розницу</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Имя</label>
+        <input type="text" id="name" placeholder="Ваше имя" required>
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" id="phone" placeholder="+7 ___ ___ __ __" required>
+      </div>
+      <!-- 🔹 НОВОЕ ПОЛЕ -->
+      <div class="form-group">
+        <label>Адрес доставки / место поставки</label>
+        <input 
+          type="text"
+          id="address"
+          placeholder="Город, улица, дом"
+          required
+        >
+      </div>
+      <button type="submit" class="form-btn">
+        Отправить заявку в WhatsApp
+      </button>
+    </form>
+  </div>
+</div>
+<section class="about-product" id="products">
+  <div class="container about-container">
+    <!-- ЛЕВАЯ ЧАСТЬ (ТЕКСТ) -->
+    <div class="about-text">
+      <h2>О продукте</h2>
+      <p class="about-desc">
+        Незамерзающий стеклоомыватель предназначен для эффективной очистки
+        лобового стекла в зимних условиях. Обеспечивает отличную видимость
+        при низких температурах и интенсивных загрязнениях.
+      </p>
+      <ul class="about-list">
+        <li>Работает при температуре до −30°C</li>
+        <li>Не оставляет разводов</li>
+        <li>Безопасен для резины и пластика</li>
+        <li>Подходит для всех типов автомобилей</li>
+      </ul>
+    </div>
+    <!-- ПРАВАЯ ЧАСТЬ (пока пусто / потом картинка) -->
+    <div class="about-media">
+      <!-- сюда позже добавим изображение -->
+    </div>
+  </div>
+</section>
+<section class="advantages-bg" id="oremium">
+  <div class="advantages-overlay"></div>
+  <div class="advantages-container">
+    <h2 class="advantages-title">Наши преимущества</h2>
+    <div class="advantages-grid">
+      <div class="adv-item">
+        <span class="adv-icon">✔</span>
+        <h3>Высокое качество</h3>
+        <p>Эффективно очищает стекло без разводов и повреждений.</p>
+      </div>
+      <div class="adv-item">
+        <span class="adv-icon">❄</span>
+        <h3>Морозостойкость</h3>
+        <p>Не замерзает даже при экстремально низких температурах.</p>
+      </div>
+      <div class="adv-item">
+        <span class="adv-icon">🚗</span>
+        <h3>Безопасен для авто</h3>
+        <p>Не вредит лакокрасочному покрытию и резинкам.</p>
+      </div>
+      <div class="adv-item">
+        <span class="adv-icon">💰</span>
+        <h3>Экономичный расход</h3>
+        <p>Меньше расход — больше выгоды для водителя.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contacts-block" id="contac">
+  <div class="contacts-container">
+    <h2 class="contacts-title">Наши контакты</h2>
+    <div class="contacts-card">
+      <p class="contacts-text">Свяжитесь с нами прямо сейчас</p>
+      <a href="tel:+77072002014" class="contacts-phone">
+        +7&nbsp;707&nbsp;200&nbsp;2014
+      </a>
+      <p class="contacts-subtext">
+        Звонки и WhatsApp • В удобное для вас время
+      </p>
+    </div>
+  </div>
+</section>
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+  const orderBtn = document.getElementById('orderBtn');
+  const modal = document.getElementById('orderModal');
+  const closeModal = document.getElementById('closeModal');
+  const form = document.getElementById('orderForm');
+
+  // Открыть модалку
+  orderBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.add('active');
+  });
+
+  // Закрыть по крестику
+  closeModal.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  // Закрыть по клику вне окна
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+  // Отправка в WhatsApp
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const clientType = document.getElementById('clientType').value;
+    const buyType = document.getElementById('buyType').value;
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const text =
+      `Заявка с сайта:%0A` +
+      `Тип клиента: ${clientType}%0A` +
+      `Тип покупки: ${buyType}%0A` +
+      `Имя: ${name}%0A` +
+      `Телефон: ${phone}%0A` +
+      `Адрес доставки: ${address}`;
+    const whatsappNumber = '77072002014';
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, '_blank');
+    // Закрываем модалку и очищаем форму
+    modal.classList.remove('active');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
